@@ -129,6 +129,7 @@ body {
   color: white;
 }
 
+
 .container {
   width: 100%;
   height: 100%;
@@ -320,7 +321,7 @@ h2 {
 .green {
   padding: 2%;
   border-radius: 5%;
-  height: auto;
+  height: 100%;
   background-color: #6a813b;
   color: white;
 }
@@ -330,16 +331,18 @@ h2 {
   padding: 2%;
   border-radius: 5%;
 
-  height: auto;
+  height: 100%;
   background-color: #446daa;
   color: white;
 }
 
 .profile-photo {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
   object-fit: cover;
   border-radius: 5%;
+  display: block; 
 }
 
 .video {
