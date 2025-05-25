@@ -135,7 +135,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1%;
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
@@ -147,7 +147,7 @@ button {
   width: 14rem;
   color: #999;
   background: #2d2d2d;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   border-radius: 50px;
@@ -320,7 +320,7 @@ h2 {
 .green {
   padding: 2%;
   border-radius: 5%;
-  height: 500px;
+  height: auto;
   background-color: #6a813b;
   color: white;
 }
@@ -330,7 +330,7 @@ h2 {
   padding: 2%;
   border-radius: 5%;
 
-  height: 500px;
+  height: auto;
   background-color: #446daa;
   color: white;
 }
