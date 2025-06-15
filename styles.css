@@ -1,17 +1,18 @@
+/* General Reset and Typography */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Quicksand', 'Arial Rounded MT Bold', 'Segoe UI', sans-serif
+  font-family: 'Quicksand', 'Arial Rounded MT Bold', 'Segoe UI', sans-serif;
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
-
 }
 
+/* Header Styling */
 .header {
   width: 100%;
   display: flex;
@@ -26,6 +27,7 @@ body {
   margin-bottom: 0%;
 }
 
+/* Image and Title Layout */
 .image-column {
   display: flex;
   flex-direction: column;
@@ -45,19 +47,16 @@ body {
   text-transform: uppercase;
   border-bottom: 2px solid #ccc;
   padding-bottom: 0.5rem;
-
   position: relative;
   margin-top: 5%;
 }
 
-
-
+/* Spotify Embeds */
 .spotify-embed-left {
   position: relative;
   max-height: 500px;
   overflow-y: auto;
 }
-
 
 .spotify-embed-right {
   position: relative;
@@ -65,6 +64,7 @@ body {
   width: 100%;
 }
 
+/* Countdown Styling */
 .countdown-colour {
   padding: 2%;
   border-radius: 5%;
@@ -74,11 +74,10 @@ body {
   color: white;
 }
 
-
+/* Header Top Section */
 .header-top {
   background-image: url('Media/molly-studio-final.jpg');
   background-position: center 34%;
-  /* Moves the image down within the element */
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -88,11 +87,11 @@ body {
   align-items: center;
   gap: 15px;
   padding: 20px;
-  position: relative;
   top: 0;
   z-index: 999;
 }
 
+/* Logos */
 .coming-soon {
   width: 500px;
   height: 500px;
@@ -113,6 +112,7 @@ body {
   width: auto;
 }
 
+/* Split Container */
 .split {
   display: flex;
   align-items: center;
@@ -120,6 +120,7 @@ body {
   gap: 20px;
 }
 
+/* About Section */
 .about-colour {
   width: 510px;
   height: 510px;
@@ -129,7 +130,7 @@ body {
   color: white;
 }
 
-
+/* Container and Animation */
 .container {
   width: 100%;
   height: 100%;
@@ -142,6 +143,7 @@ body {
   animation-range: entry 0% cover 40%;
 }
 
+/* Button Styling */
 button {
   position: relative;
   padding: 0.5rem 3rem;
@@ -193,8 +195,8 @@ button::after {
   border-radius: 47px;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-
   .block,
   .block:nth-of-type(even) {
     flex-direction: column;
@@ -213,20 +215,19 @@ button::after {
   }
 }
 
-
-
+/* Animation: Appear */
 @keyframes appear {
   from {
     opacity: 0;
     scale: 0.5;
   }
-
   to {
     opacity: 1;
     scale: 1;
   }
 }
 
+/* Headings */
 h2 {
   font-size: 40px;
   margin: 20px;
@@ -236,17 +237,18 @@ h2 {
   padding-bottom: 5px;
 }
 
-.block {
+/* Blocks Layout */
+.block,
+.block-contact,
+.block-last {
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+}
 
+.block {
+  animation-range: entry 0% cover 40%;
   display: flex;
-  /* align-items: flex-start;
-  gap: 20px; */
   padding: 20px;
-  gap: 0;
-  /* remove spacing between flex children */
   width: 100%;
   gap: 20px;
 }
@@ -255,26 +257,16 @@ h2 {
   flex-direction: row-reverse;
 }
 
-
 .block>* {
   flex: 1;
   margin: 0;
-  /* remove default margin from direct children */
   padding: 0;
-  /* optional: remove padding too */
 }
 
 .block-contact {
-  animation: appear linear;
-  animation-timeline: view();
   animation-range: entry 0% cover 10%;
-
   display: flex;
-  /* align-items: flex-start;
-  gap: 20px; */
   padding: 20px;
-  gap: 0;
-  /* remove spacing between flex children */
   width: 100%;
   gap: 20px;
 }
@@ -282,26 +274,19 @@ h2 {
 .block-contact>* {
   flex: 1;
   margin: 0;
-  /* remove default margin from direct children */
   padding: 0;
-  /* optional: remove padding too */
 }
 
 .block-last {
-  animation: appear linear;
-  animation-timeline: view();
   animation-range: entry 0% cover 8%;
-
   display: flex;
   align-items: flex-start;
   padding-left: 1%;
   padding-bottom: 1%;
 }
 
-#countdown h3 {
-  margin-top: 40px;
-}
-
+/* Countdown Timer */
+#countdown h3,
 #countdown h1 {
   margin-top: 40px;
 }
@@ -317,50 +302,55 @@ h2 {
   margin-top: 15px;
 }
 
-
-.green {
-  padding: 2%;
-  border-radius: 5%;
-  height: 100%;
-  background-color: #6a813b;
-  color: white;
-}
-
-
+/* Colour Panels */
+.green,
 .blue {
   padding: 2%;
   border-radius: 5%;
-
   height: 100%;
-  background-color: #446daa;
   color: white;
+}
+
+.green {
+  background-color: #6a813b;
+}
+
+.blue {
+  background-color: #446daa;
+}
+
+/* Media Styling */
+.profile-photo,
+.profile-photo-about,
+.video {
+  object-fit: cover;
+  border-radius: 5%;
 }
 
 .profile-photo {
   width: 500px;
   height: 500px;
-  object-fit: cover;
-  border-radius: 5%;
 }
 
 .profile-photo-about {
   width: 510px;
   height: 510px;
-  object-fit: cover;
-  border-radius: 5%;
 }
 
 .video {
   width: 450px;
   height: 450px;
-  object-fit: cover;
-  border-radius: 5%;
+}
+
+/* Text Content Areas */
+.text-content,
+.text-content-email,
+.text-content-high {
+  max-width: 600px;
 }
 
 .text-content-email {
   margin-top: 5%;
-  max-width: 600px;
-
 }
 
 .text-content-email h3 {
@@ -377,8 +367,6 @@ h2 {
 
 .text-content {
   margin-top: 5%;
-  max-width: 600px;
-
 }
 
 .text-content h1 {
@@ -392,9 +380,7 @@ h2 {
   line-height: 1.5;
 }
 
-
 .text-content-high {
-  max-width: 600px;
   text-align: center;
 }
 
@@ -408,7 +394,6 @@ h2 {
   line-height: 1.5;
   font-size: 20px;
 }
-
 
 /*dark mode toggle*/
 
