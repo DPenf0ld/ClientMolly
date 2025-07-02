@@ -43,7 +43,7 @@ function updateCountdown() {
   const distance = countdownDate - now;
 
   if (distance < 0) {
-    document.getElementById("timer").innerHTML = "The countdown is over!";
+    document.getElementById("timer").innerHTML = "Released!";
     clearInterval(timerInterval);
     return;
   }

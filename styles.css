@@ -195,25 +195,7 @@ button::after {
   border-radius: 47px;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .block,
-  .block:nth-of-type(even) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
 
-  .text-content {
-    max-width: 100%;
-  }
-
-  .profile-photo {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-}
 
 /* Animation: Appear */
 @keyframes appear {
@@ -221,6 +203,7 @@ button::after {
     opacity: 0;
     scale: 0.5;
   }
+
   to {
     opacity: 1;
     scale: 1;
@@ -251,6 +234,7 @@ h2 {
   padding: 20px;
   width: 100%;
   gap: 20px;
+
 }
 
 .block:nth-of-type(odd) {
@@ -1028,4 +1012,172 @@ input:checked+.back {
   /* Vertically center items */
   gap: 20px;
   /* Space between the header and hourglass */
+}
+
+
+
+/*different screen size code*/
+@media (max-width: 1024px) {
+
+  /* Container adjustments */
+  .container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* Buttons smaller and easier to tap */
+  button {
+    width: 10rem;
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+
+  /* Title smaller */
+  .title {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+
+  /* Responsive images and videos */
+  .profile-photo,
+  .profile-photo-about,
+  .video,
+  .coming-soon {
+    width: 90%;
+    height: auto;
+  }
+
+  /* About and countdown sections */
+  .about-colour,
+  .countdown-colour {
+    width: 95%;
+    height: auto;
+    margin: 1rem auto;
+    max-width: 600px;
+    /* Added max width for better control */
+  }
+
+  /* Text content areas */
+  .text-content,
+  .text-content-high,
+  .text-content-email {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Logos container wraps and smaller logos */
+  .logos {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  /* Stack split sections vertically */
+  .split {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Header adjustments */
+  .header {
+    padding: 10px 20px;
+  }
+
+  .header-top {
+    padding: 15px;
+    margin-top: 2rem;
+  }
+
+
+
+
+}
+
+
+
+
+/*Phone size*/
+@media (max-width: 600px) {
+
+  .switch {
+    display: none !important;
+  }
+
+  .block {
+    animation-range: entry 0% cover 20%;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    gap: 20px;
+
+  }
+
+
+
+  .header {
+    Padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  .header-top {
+    background-position: center;
+    padding: 10px;
+    margin-top: 140px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .block,
+  .block:nth-of-type(even),
+  .block-contact,
+  .block-last {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .block>* {
+    flex: unset;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .spotify-embed-left iframe,
+  .spotify-embed-right iframe {
+    height: 200px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .text-content-email h3,
+  .text-content-high h1 {
+    font-size: 28px;
+  }
+
+  .text-content-high p,
+  .text-content-email p {
+    font-size: 1rem;
+  }
+
+  #timer {
+    font-size: 1.5rem;
+  }
+
+  .header-hourglass {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .block.vertical-stack {
+    flex-direction: column;
+    align-items: center;
+  }
 }
