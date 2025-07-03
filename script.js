@@ -1,3 +1,15 @@
+const videos = document.querySelectorAll('.video');
+
+videos.forEach(video => {
+  video.addEventListener('click', () => {
+    video.muted = false;
+    video.volume = 1.0;
+
+    video.play();
+  });
+});
+
+
 const buttons = document.querySelectorAll(".btn");
 
 
@@ -12,7 +24,7 @@ buttons.forEach((btn) => {
   });
 });
 
-const headerOffset = 100; // Adjust this to your header's height
+const headerOffset = 100;
 
 document.querySelectorAll('.btn').forEach(button => {
   button.addEventListener('click', () => {
@@ -81,6 +93,7 @@ const toggle = document.getElementById("onoff");
 toggle.addEventListener("change", () => {
   document.body.classList.toggle("dark-mode");
 });
+
 
 
 

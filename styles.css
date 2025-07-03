@@ -235,11 +235,12 @@ h2 {
   width: 100%;
   gap: 20px;
 
+    justify-content: center; /* Centers items horizontally */
+  align-items: flex-start; /* Aligns items to the top vertically (change if needed) */
+
 }
 
-.block:nth-of-type(odd) {
-  flex-direction: row-reverse;
-}
+
 
 .block>* {
   flex: 1;
@@ -291,7 +292,7 @@ h2 {
 .blue {
   padding: 2%;
   border-radius: 5%;
-  height: 100%;
+  height: 510px;
   color: white;
 }
 
@@ -312,8 +313,8 @@ h2 {
 }
 
 .profile-photo {
-  width: 500px;
-  height: 500px;
+  max-width: 510px;
+  height: 510px;
 }
 
 .profile-photo-about {
@@ -322,9 +323,17 @@ h2 {
 }
 
 .video {
-  width: 450px;
-  height: 450px;
+  aspect-ratio: 9 / 16;
+  width: 300px;     /* Adjust as needed */
+  max-height: 900px;
+  object-fit: cover;
+  cursor: pointer;
+  display: block;
 }
+
+
+
+
 
 /* Text Content Areas */
 .text-content,
