@@ -48,7 +48,7 @@ document.querySelectorAll('.btn').forEach(button => {
 
 
 
-const countdownDate = new Date("2025-06-31T23:59:59").getTime();
+const countdownDate = new Date("2025-09-04T23:59:59").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
@@ -68,17 +68,17 @@ function updateCountdown() {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
- // document.getElementById("timer").innerHTML =
- //   days +
- //   "d " +
-  //  hours +
-  //  "h " +
-   // minutes +
-   // "m " +
-  //  seconds +
-   // "s ";
+  document.getElementById("timer").innerHTML =
+    days +
+    "d " +
+    hours +
+    "h " +
+    minutes +
+    "m " +
+    seconds +
+    "s ";
 
-  document.getElementById("timer").innerHTML ="PENDING";
+ // document.getElementById("timer").innerHTML ="PENDING";
 
 }
 
