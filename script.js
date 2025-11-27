@@ -1,4 +1,4 @@
-const videos = document.querySelectorAll('.video');
+﻿const videos = document.querySelectorAll('.video');
 
 videos.forEach(video => {
   video.addEventListener('click', () => {
@@ -55,7 +55,7 @@ function updateCountdown() {
   const distance = countdownDate - now;
 
   if (distance < 0) {
-    document.getElementById("timer").innerHTML = "Released!";
+    document.getElementById("timer").innerHTML = "Pending";
     clearInterval(timerInterval);
     return;
   }
@@ -95,6 +95,32 @@ toggle.addEventListener("change", () => {
 });
 
 
+// Hide header on scroll for smaller screens
+let lastScroll = 0;
+
+function handleHeaderScroll() {
+    const header = document.querySelector('.header');
+    const currentScroll = window.pageYOffset;
+
+    // Only activate on iPad/iPhone/small screens
+    if (window.innerWidth <= 1024) {
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            // Scrolling down → hide header
+            header.classList.add('hide');
+        } else {
+            // Scrolling up → show header
+            header.classList.remove('hide');
+        }
+    } else {
+        // Ensure header always visible on desktop
+        header.classList.remove('hide');
+    }
+
+    lastScroll = currentScroll;
+}
+
+window.addEventListener('scroll', handleHeaderScroll);
+window.addEventListener('resize', handleHeaderScroll);
 
 
 
