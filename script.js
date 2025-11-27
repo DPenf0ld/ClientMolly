@@ -48,14 +48,14 @@ document.querySelectorAll('.btn').forEach(button => {
 
 
 
-const countdownDate = new Date("2025-09-04T23:59:59").getTime();
+const countdownDate = new Date("2026-01-02T00:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
   const distance = countdownDate - now;
 
   if (distance < 0) {
-    document.getElementById("timer").innerHTML = "Pending";
+    document.getElementById("timer").innerHTML = "Released!";
     clearInterval(timerInterval);
     return;
   }
